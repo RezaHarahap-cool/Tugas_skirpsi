@@ -1,18 +1,20 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "../asset/bg_logo.png";
+import { useNavigate } from "react-router-dom";
 
 // Memindahkan menu ke dalam array agar lebih rapi dan mudah diatur
 const navLinks = [
   { href: "/", label: "Beranda" },
   { href: "jurusan", label: "Jurusan" },
-  { href: "profil", label: "Profil" },
-  { href: "guru-staf", label: "Guru/Staf" },
+  { href: "profile", label: "Profil" },
+  { href: "kariawan", label: "Guru/Staf" },
   { href: "galeri", label: "Galeri" },
   { href: "berita", label: "Berita" },
 ];
 
 export default function Navbar() {
+  const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -58,8 +60,12 @@ export default function Navbar() {
         </div>
 
         {/* Tombol Login Kanan (Hanya muncul di Desktop) */}
-        <div className="hidden md:block">
-          <button className="bg-secondary text-white px-6 py-2 rounded-full hover:opacity-90 transition-opacity">
+<div className="hidden md:block">
+          {/* 3. Tambahkan onClick pada tombolnya */}
+          <button 
+            onClick={() => navigate('/login')} 
+            className="bg-secondary text-white px-6 py-2 rounded-full hover:opacity-90 transition-opacity cursor-pointer"
+          >
             Login
           </button>
         </div>
@@ -92,7 +98,7 @@ export default function Navbar() {
             {/* Tombol Login versi Mobile */}
             <button 
               className="bg-secondary text-white px-4 py-2 mt-2 rounded-full w-full max-w-[200px]"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => navigate('/login')}
             >
               Login
             </button>
