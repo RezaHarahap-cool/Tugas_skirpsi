@@ -6,6 +6,13 @@ import Kariawan from './pages/public/Kariawan';
 import Galeri from './pages/public/Galeri';
 import Berita from './pages/public/Berita';
 import Login from './pages/auth/LoginPage';
+import AdminLayout from './pages/dashboard/Admin/Dashbord';
+import PageDataGuru from './pages/dashboard/Admin/PageDataGuru';
+import PageDataSiswa from './pages/dashboard/Admin/PageDataSiswa';
+import PageDataKepalaSekolah from './pages/dashboard/Admin/PageDataKepalaSekolah';
+import PageDataJurusan from './pages/dashboard/Admin/PageDataJurusan'
+import PageDataMapel from './pages/dashboard/Admin/PageDataMapel';
+import PageDataRoster from './pages/dashboard/Admin/PageDataRoster';
 // Import halaman lain jika sudah dibuat:
 // import Login from './pages/auth/Login';
 
@@ -13,7 +20,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Rute root "/" langsung memanggil Home */}
+        {/* Rute publik */}
         <Route path="/" element={<Home />} />
         <Route path="/jurusan" element={<JurusanPage />} />
         <Route path="/profile" element={<Profile />} />
@@ -21,7 +28,15 @@ export default function App() {
         <Route path="/galeri" element={<Galeri />} />
         <Route path="/berita" element={<Berita/>} />
         <Route path="/login" element={<Login />} />
-        
+
+        {/* Rute admin */}
+        <Route path="/admin" element={<AdminLayout />} />
+        <Route path="/admin/data-guru" element={<PageDataGuru />} />
+        <Route path="/admin/data-siswa" element={<PageDataSiswa />} />
+        <Route path="admin/data-kepsek" element={<PageDataKepalaSekolah />} />
+        <Route path="/admin/jurusan" element={<PageDataJurusan />} />
+        <Route path="/admin/mata-pelajaran" element={<PageDataMapel />} />
+        <Route path="/admin/roster" element={<PageDataRoster />} />
         {/* Rute lainnya nanti taruh di bawah sini */}
         {/* <Route path="/login" element={<Login />} /> */}
       </Routes>
