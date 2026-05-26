@@ -4,9 +4,8 @@ import {
   LayoutDashboard, Users, UserSquare, GraduationCap, 
   BookOpen, CalendarDays, Building, BookMarked, 
   Newspaper, Printer, Settings, User, LogOut, 
-  MoreVertical, ArrowUpRight, Menu, X 
+  MoreVertical, TrendingUp, FileBadge, X 
 } from "lucide-react";
-
 // ==========================================
 // 1. KOMPONEN SIDEBAR
 // ==========================================
@@ -23,6 +22,8 @@ const menuItems = [
   { title: "Tahun Ajaran", icon: BookMarked, path: "/admin/tahun-ajaran" },
   { title: "Berita", icon: Newspaper, path: "/admin/berita" },
   { title: "Cetak Rapor", icon: Printer, path: "/admin/cetak-rapor" },
+  { title: "Kenaikan Kelas", icon: TrendingUp, path: "/admin/kenaikan-kelas" },
+  { title: "Alumni", icon: FileBadge, path: "/admin/alumni" },
 ];
 
 export default function Sidebar({ isMobileOpen, setIsMobileOpen }: { isMobileOpen: boolean, setIsMobileOpen: (v: boolean) => void }) {
