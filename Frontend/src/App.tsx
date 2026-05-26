@@ -19,6 +19,15 @@ import PageDataBerita from './pages/dashboard/Admin/PageDataBerita';
 import PageDataRaport from './pages/dashboard/Admin/PageDataRaport';
 import PageDataKenaikanKelas from './pages/dashboard/Admin/PageKenaikankelas';
 import PageDataAlumni from './pages/dashboard/Admin/PageAlumni';
+import GuruLayout from './pages/dashboard/Guru/GuruDashbord';
+import PaggePresensi from './pages/dashboard/Guru/PagePresensi';
+import PageNilai from './pages/dashboard/Guru/PageNilai';
+import PageJadwalMengajar from './pages/dashboard/Guru/PageJadwalMengajar';
+import PageLaporan from './pages/dashboard/Guru/PageLaporan';
+import SiswaLayout from './pages/dashboard/Siswa/SiswaDashbord';
+import PageAbsensi from './pages/dashboard/Siswa/PageAbsensi';
+import PageRaport from './pages/dashboard/Siswa/PageRaport';
+import PageRoster from './pages/dashboard/Siswa/PageRoster';
 // Import halaman lain jika sudah dibuat:
 // import Login from './pages/auth/Login';
 
@@ -49,6 +58,19 @@ export default function App() {
         <Route path="/admin/cetak-rapor" element={<PageDataRaport />} />
         <Route path="/admin/kenaikan-kelas" element={<PageDataKenaikanKelas />} />
         <Route path="/admin/alumni" element={<PageDataAlumni />} />
+
+        {/* Rute Guru */}
+        <Route path="/guru" element={<GuruLayout />} />
+        <Route path="/guru/presensi" element={<PaggePresensi />} />
+        <Route path="/guru/Nilai" element={<PageNilai />} />
+        <Route path="/guru/JadwalMengejar" element={<PageJadwalMengajar />} />
+        <Route path="/guru/laporan" element={<PageLaporan />} />
+        {/* Rute Siswa */}
+
+        <Route path="/siswa" element={<SiswaLayout />} />
+        <Route path="/siswa/absensi" element={<PageAbsensi />} />
+        <Route path="/siswa/rapor" element={<PageRaport />} />
+        <Route path="/siswa/roster" element={<PageRoster />} />
         {/* Rute lainnya nanti taruh di bawah sini */}
         {/* <Route path="/login" element={<Login />} /> */}
       </Routes>
