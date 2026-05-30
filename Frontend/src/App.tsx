@@ -33,7 +33,7 @@ import PageRoster from './pages/dashboard/Siswa/PageRoster';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Tugas_skripsi">
       <Routes>
         {/* Rute publik */}
         <Route path="/" element={<Home />} />

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Search, Calendar, ArrowRight } from "lucide-react";
-import gambarPlaceholder from "../asset/profile.jpg"; // Ganti dengan path gambarmu
+import { Search, Calendar, ArrowRight } from "lucide-react";// Ganti dengan path gambarmu
 
 // 1. Tipe Data Berita
 interface BeritaItem {
