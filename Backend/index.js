@@ -1,6 +1,8 @@
 import express from 'express';
 import cors from 'cors';
 import adminRoutes from './routes/adminRoutes.js';
+import authRoutes from './routes/authRoutes.js';
+import guruRoutes from './routes/guruRoutes.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -19,6 +21,8 @@ app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 app.use('/api/admin', adminRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/api/guru', guruRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server backend sudah menyala di http://localhost:${PORT}`);
